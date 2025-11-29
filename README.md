@@ -1,12 +1,12 @@
 # SSB
 
-EXP NO: 3	SSB-SC-AM MODULATION using SCILAB
+# EXP NO: 3	SSB-SC-AM MODULATION using SCILAB
 
-AIM:
+# AIM:
 
 To write a program to perform SSBSC modulation and demodulation using SCI LAB and study its spectral characteristics
 
-EQUIPMENTS REQUIRED
+# EQUIPMENTS REQUIRED
 
 •	Computer with i3 Processor
 
@@ -15,7 +15,7 @@ EQUIPMENTS REQUIRED
 Note: Keep all the switch faults in off position
 
 
-Algorithm
+# Algorithm
 1.	Define Parameters:
 •	Fs: Sampling frequency.
 •	T: Duration of the signal.
@@ -35,38 +35,68 @@ Algorithm
 •	Plot the message signal, carrier signal, SSBSC modulated signal, and the recovered signal after demodulation.
 
 
-PROCEDURE
+# PROCEDURE
 
 •	Refer Algorithms and write code for the experiment.
 •	Open SCILAB in System
 •	Type your code in New Editor
 •	Save the file
- 
 •	Execute the code
 •	If any Error, correct it in code and execute again
 •	Verify the generated waveform using Tabulation and Model Waveform
 
-Model Waveform
+# Model Waveform
 
 <img width="704" height="178" alt="image" src="https://github.com/user-attachments/assets/32ee29b3-0d95-4192-9762-972d50c05c90" />
 <img width="706" height="167" alt="image" src="https://github.com/user-attachments/assets/bff0d8fd-d679-444e-af37-0b34585853c1" />
 
-Program
+# Program
+```
+ac=10;                // Carrier amplitude
+Am=11.9;              // Message amplitude
+fc=6700;             // Carrier frequency
+fm=670;              // Message frequency
+fs=92000;            // Sampling frequency
+t=0:1/fs:2/fm;       // Time base for two message cycles
+wc=2*3.14*fc;        // Carrier angular frequency
+wm=2*3.14*fm;        // Message angular frequency
+// Message signal
+e1=(Am*sin(wm*t));
+subplot(4,1,1);
+plot(t,e1);
+xtitle("Message Signal");
+xgrid();
+// Carrier signal
+e2=(ac*sin(wc*t));
+subplot(4,1,2);
+plot(t,e2);
+title("Carrier signal");
+xgrid
+// --- Sideband Components ---
+sbsc1=(Am/2.*cos(wc*t-wm*t))-(Am/2.*cos(wc*t+wm*t));
+sbsc2=(Am/2.*cos(wc*t-wm*t))+(Am/2.*cos(wc*t+wm*t));
 
-OUTPUT WAVEFORM
+// Combination 1 (USB + LSB together => DSB-SC)
+e3=(sbsc2)+(sbsc1);
+subplot(4,1,3);
+plot(t,e3);
+title("USB + LSB together => DSB-SC");
+xgrid
+// Combination 2 (USB - LSB => isolates one sideband → SSB-SC)
+e4=(sbsc2)-(sbsc1);
+subplot(4,1,4);
+plot(t,e4);
+title("USB - LSB => isolates one sideband → SSB-SC");
+xgrid;
+```
+# OUTPUT WAVEFORM
+<img width="1920" height="1200" alt="ac3" src="https://github.com/user-attachments/assets/3d2a026f-dc3a-4e8c-84dd-742701a7c137" />
 
-TABULATION
+# TABULATION
+![WhatsApp Image 2025-11-29 at 13 27 33_a297a55d](https://github.com/user-attachments/assets/e8fc1dee-b52f-41ff-b94f-a5b73a8bbb3c)
+![WhatsApp Image 2025-11-29 at 13 27 33_97ad3bbe](https://github.com/user-attachments/assets/65ecad71-f4f6-4927-9546-dcf604f45ced)
 
-
-
-
-
-
-
-
-
-RESULT:
-
+# RESULT:
 Thus, the SSB-SC-AM Modulation and Demodulation is experimentally done and the output is verified.
 
 
