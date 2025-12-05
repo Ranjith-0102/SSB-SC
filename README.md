@@ -93,8 +93,9 @@ xgrid;
 <img width="1920" height="1200" alt="ac3" src="https://github.com/user-attachments/assets/3d2a026f-dc3a-4e8c-84dd-742701a7c137" />
 
 # TABULATION
-![WhatsApp Image 2025-11-29 at 13 27 33_a297a55d](https://github.com/user-attachments/assets/e8fc1dee-b52f-41ff-b94f-a5b73a8bbb3c)
-![WhatsApp Image 2025-11-29 at 13 27 33_97ad3bbe](https://github.com/user-attachments/assets/65ecad71-f4f6-4927-9546-dcf604f45ced)
+![WhatsApp Image 2025-12-05 at 14 14 09_751abfe2](https://github.com/user-attachments/assets/c0f6d2b5-a1d3-429d-8176-a941dd03b53d)
+
+![WhatsApp Image 2025-12-05 at 14 14 10_eea8fe14](https://github.com/user-attachments/assets/c58ace46-fa72-4b85-8def-4a4c20ad17a7)
 
 # RESULT:
 Thus, the SSB-SC-AM Modulation and Demodulation is experimentally done and the output is verified.
